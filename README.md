@@ -1,3 +1,2 @@
-# transylvanians
-who we are?
-welcome to Transylvanians
+# The Transylvanians
+**The Transylvanians**: Forging the Frontend Magic, Web Designs Beyond Compare
