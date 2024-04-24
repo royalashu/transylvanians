@@ -1,125 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chrome</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
-<style>
-    *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    }
-     
-    html,body{
-    width: 100%;
-    height: 100%;
-    }
-    #page1{
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Lugrasimo&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&family=Londrina+Solid:wght@100;300;400;900&display=swap");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #252525;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* width */
+      ::-webkit-scrollbar {
+    display: none;
+}
+
+      #main {
+        width: 100%;
+        overflow-x: hidden;
+    scroll-behavior: smooth;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      #loder {
+        position: absolute;
+        z-index: 11;
+        top: 0;
         width: 100%;
         height: 100vh;
-        padding: 2vw 0;
         overflow: hidden;
-    }
-#p1-top{
-    width: 100%;
-    height: 100%;
-    gap: 2vw;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-text-align: center;
-text-transform:capitalize;
-font-size: 2vw;
-}
-#top-slide{
-    position: relative;
-                width: 100%;
-                z-index: 1;
-    display: flex;
-    align-items: last baseline;
-    justify-content: space-between;
-    overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-  scroll-snap-type: x mandatory;
-  aspect-ratio: 2/1;
-  cursor:grab;
-}
-/* #top-slide::-webkit-scrollbar{
-    display: none;
-} */
-#top-slide img{
-height: 100%;
-    object-fit: fill;
-    scroll-snap-align: center;
-   -webkit-user-drag: none;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #252525;
+      }
 
-#top-slide img:nth-of-type(1) {
-                -webkit-box-ordinal-group: 2;
-                -ms-flex-order: 1;
-                order: 1
-            }
+      #loder h1 {
+        color: #ffffff;
+        mix-blend-mode: hard-light;
+      }
 
-            #top-slide img:nth-of-type(2) {
-                -webkit-box-ordinal-group: 5;
-                -ms-flex-order: 4;
-                order: 4
-            }
+      #nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0 0 2vw;
+        border-bottom: 1px solid #252525;
+      }
 
-            #top-slide img:nth-of-type(3) {
-                -webkit-box-ordinal-group: 4;
-                -ms-flex-order: 3;
-                order: 3
-            }
+      #nav #menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3vw;
+      }
 
-            #top-slide img:nth-of-type(4) {
-                -webkit-box-ordinal-group: 3;
-                -ms-flex-order: 2;
-                order: 2
-            }
+      #nav a {
+        color: #252525;
+        font-size: 1.4vw;
+      }
 
-            #top-slide img:nth-of-type(5) {
-                -webkit-box-ordinal-group: 6;
-                -ms-flex-order: 5;
-                order: 5
-            }
+      .search i {
+        color: #252525;
+        font-size: 1.6vw;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      #menu-more {
+        position: relative;
+        display: flex;
+        background-color: #252525;
+        padding: 2vw;
+      }
+
+      #menu-more i {
+        color: #ffffff;
+        font-size: 2vw;
+        cursor: pointer;
+      }
+
+      .m-m-content {
+        display: none;
+        min-height: 200px;
+        min-width: 200px;
+        padding: 2vw;
+        background-color: #252525;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .close {
+        display: flex;
+        margin-left: auto;
+      }
+
+      #page1 {
+        min-height: 60vh;
+        padding: 2vw 0;
+      }
+
+      #p1-top {
+        width: 100%;
+        height: 100%;
+        gap: 2vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        text-transform: capitalize;
+        font-size: 2vw;
+      }
+      #top-slide {
+        position: relative;
+        height: 60vh;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: 60%;
+        z-index: 1;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        white-space: nowrap;
+        cursor: grab;
+      }
+
+      #top-slide img {
+        width: 100%;
+        object-fit: contain;
+        aspect-ratio: 2/1;
+        object-position: center;
+      }
+      .b {
+        max-width: 60vw;
+      }
+      .a {
+        max-width: 60vw;
+      }
+      .c {
+        aspect-ratio: 1/2;
+      }
 
 
-.c{
-    aspect-ratio: 1/2;
-}
-.b{
-    aspect-ratio: 2/1;
-    /* height: clamp(282px, 41.40625vw, 444px);  */
-}
+      #page2 {
+        width: 100%;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="loder">
+        <h1>KAWASAKI</h1>
+      </div>
 
-</style>
+      <div id="nav">
+        <div id="logo"><h2>KAWASAKI</h2></div>
 
-</head>
-<body>
-    <div id="page1">
-<div id="p1-top">
-    <img src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg" alt="">
-    <h1>let the <br>
-        good times roll</h1>
+        <div id="menu">
+          <a href="#">Top Feature</a>
+          <a href="#">Gallery</a>
+          <a href="#">Specs</a>
+          <a href="#">Accessories</a>
+          <a href="#">Offers</a>
+        </div>
 
-<div id="top-slide">
-    <img src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-1.webp" alt="">
+        <div class="search"><i class="ri-search-line"></i></div>
 
-    <img class="c" src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-2.webp" alt="">
+        <div id="menu-more">
+          <i class="ri-menu-4-line"></i>
+          <div class="m-m-content">
+            <div class="close"><i class="ri-close-fill"></i></div>
+          </div>
+        </div>
+      </div>
 
-<img class="b" src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3.webp" alt="">
+      <div id="page1">
+        <div id="p1-top">
+          <img
+            src="https://www.google.com/chrome/static/images/chrome-logo-m100.svg"
+            alt=""
+          />
+          <h1>
+            let the <br />
+            good times roll
+          </h1>
+        </div>
+        <div id="top-slide">
+          <img
+            class="a"
+            src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-1.webp"
+            alt=""
+          />
 
-<img class="c" src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-4.webp" alt="">
-<img src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5.webp" alt="">
-</div>
-</div>
+          <img
+            class="c"
+            src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-2.webp"
+            alt=""
+          />
+
+          <img
+            class="b"
+            src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-3.webp"
+            alt=""
+          />
+
+          <img
+            class="c"
+            src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-4.webp"
+            alt=""
+          />
+          <img
+            class="a"
+            src="https://www.google.com/chrome/static/images/dev-components/chrome-gallery-5.webp"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="page2">
+        <h1>jasfahfk</h1>
+      </div>
     </div>
 
-    
-</body>
+    <!--  Gsap is needed for Basic Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        gsap.to("#loder", {
+          display: "none",
+          delay: 2,
+          duration: 1,
+          scale: 100,
+          mixBlendMode: "darken",
+          ease: Linear.easeNone,
+        });
+
+      let tl = gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "page1",
+            start: "top top",
+            end: "bottom 20%",
+            scrub: 3,
+            // markers: true,
+            toggleActions: "restart none none reset",
+          },
+        })
+        .from("#top-slide .b", {
+          y: "30%",
+          scale: 1.2,
+          ease: Linear.easeNone,
+        })
+        .to("#top-slide", {
+          x: "-30%",
+          ease: Linear.easeNone,
+        });
+    </script>
+  </body>
 </html>
