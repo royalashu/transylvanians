@@ -20,7 +20,7 @@
         justify-content: center;
       }
       img {
-        width: 53vw;
+        width: 30vw;
         object-fit: cover;
         position: absolute;
         aspect-ratio: 16/9;
@@ -30,7 +30,7 @@
       }
       img:last-child {
         position: relative;
-        width: 49vw;
+        width: 28vw;
         top: 0;
         transform: translate(-50%);
 
@@ -38,7 +38,7 @@
       .card {
         max-width: min-content;
         background-color: #1C1C1C;
-        padding: 3vw;
+        padding: 2vw;
         display: flex;
         flex-direction: column;
         gap: 2vw;
@@ -50,8 +50,7 @@
       }
 
       .c-btm {
-        padding: 2vw;
-        gap: 2vw;
+        gap: 1vw;
         display: flex;
         align-items: center;
       }
@@ -59,20 +58,23 @@
       .c-btm div{
         display: flex;
         flex-direction: column;
-        gap: 2vw;
-        /* align-items: center; */
+        gap: 1vw;
         justify-content: center;
+      }
+      .c-btm div:last-child{
+        align-items: center;
       }
 
       .c-btm h1{
         color: #fff;
-        font-size: 4vw;
+        font-size: 2vw;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       .c-btm h5{
         text-wrap: nowrap;
+        font-weight: 500;
         color: #fff;
-        font-size: 2vw;
+        font-size: 1.5vw;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       }
       .c-btm p{
@@ -86,36 +88,96 @@
         color: #ddd;
         background-color: #000;
         border: none;
+        font-size: 1.2vw;
+        cursor: pointer;
         border-radius: .5vw;
         text-wrap: nowrap;
         border-left: 2px solid #24FF00;
       }
-    </style>
+
+
+
+
+      #page1{
+        display: flex;
+gap: 1vw;
+      }    </style>
   </head>
   <body>
+<div id="page1">
     <div class="card">
-      <div class=".caed-img" style="position: relative">
-        <img
-          style="border-radius: 30px; filter: blur(5px)"
-          src="r.png"
-        />
-
-        <img
-          style="border-radius: 23px;"
-          src="r.png"
-        />
+        <div class=".caed-img" style="position: relative">
+          <img
+            style="border-radius: 30px; filter: blur(5px)"
+            src="r.png"
+          />
+  
+          <img
+            style="border-radius: 23px;"
+            src="r.png"
+          />
+        </div>
+  
+        <div class="c-btm">
+          <div>
+              <h1>Ninja H2R</h1>
+  <p>A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</p>
+          </div>
+          <div>
+              <h5>₹ 79, 00, 000</h5>
+  <button>Check it Out</button>
+          </div>
+        </div>
       </div>
 
-      <div class="c-btm">
-        <div>
-            <h1>Ninja H2R</h1>
-<p>A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</p>
+      <div class="card">
+        <div class=".caed-img" style="position: relative">
+          <img
+            style="border-radius: 6px; filter: blur(5px)"
+            src="r.png"
+          />
+  
+          <img
+            style="border-radius: 3px;"
+            src="r.png"
+          />
         </div>
-        <div>
-            <h5>₹ 79, 00, 000</h5>
-<button>Check it Out</button>
+  
+        <div class="c-btm">
+          <div>
+              <h1>Ninja H2R</h1>
+  <p>A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</p>
+          </div>
+          <div>
+              <h5>₹ 79, 00, 000</h5>
+  <button>Check it Out</button>
+          </div>
+        </div>
+      </div>    <div class="card">
+        <div class=".caed-img" style="position: relative">
+          <img
+            style="border-radius: 30px; filter: blur(5px)"
+            src="r.png"
+          />
+  
+          <img
+            style="border-radius: 23px;"
+            src="r.png"
+          />
+        </div>
+  
+        <div class="c-btm">
+          <div>
+              <h1>Ninja H2R</h1>
+  <p>A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</p>
+          </div>
+          <div>
+              <h5>₹ 79, 00, 000</h5>
+  <button>Check it Out</button>
+          </div>
         </div>
       </div>
-    </div>
+
+</div>
   </body>
 </html>
