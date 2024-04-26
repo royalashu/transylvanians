@@ -1,55 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        html,
-        body {
-            width: 100%;
-            height: 100%;
-        }
+      html,
+      body {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      img {
+        width: 53vw;
+        object-fit: cover;
+        position: absolute;
+        aspect-ratio: 16/9;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      img:last-child {
+        position: relative;
+        width: 49vw;
+        top: 0;
+        transform: translate(-50%);
 
-        #main {
-            display: flex;
-            min-height: 100vh;
-            width: 100%;
-            /* background-color: #000; */
-            align-items: center;
-            justify-content: center;
-            gap: 5vw;
-        }
+      }
+      .card {
+        max-width: min-content;
+        background-color: #1C1C1C;
+        padding: 3vw;
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 2vw;
+        justify-content: center;
+      }
 
+      .c-btm {
+        padding: 2vw;
+        gap: 2vw;
+        display: flex;
+        align-items: center;
+      }
+
+      .c-btm div{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+        /* align-items: center; */
+        justify-content: center;
+      }
+
+      .c-btm h1{
+        color: #fff;
+        font-size: 4vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .c-btm h5{
+        text-wrap: nowrap;
+        color: #fff;
+        font-size: 2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      .c-btm p{
+        color: #ddd;
+        font-size: 1.2vw;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+
+      .c-btm button{
+        padding: 1vw 2vw;
+        color: #ddd;
+        background-color: #000;
+        border: none;
+        border-radius: .5vw;
+        text-wrap: nowrap;
+        border-left: 2px solid #24FF00;
+      }
     </style>
-</head>
-<body>
-    <div id="main">
+  </head>
+  <body>
+    <div class="card">
+      <div class=".caed-img" style="position: relative">
+        <img
+          style="border-radius: 30px; filter: blur(5px)"
+          src="r.png"
+        />
 
-            <div style="width: 827px; height: 779px; position: relative">
-                <div style="width: 827px; height: 779px; left: 0px; top: 0px; position: absolute; background: #1C1C1C; border-radius: 24px; border: 1px rgba(255, 255, 255, 0.41) solid"></div>
-                <div style="width: 827px; height: 779px; left: 0px; top: 0px; position: absolute; background: #1C1C1C; border-radius: 24px; border: 1px rgba(255, 255, 255, 0.41) solid"></div>
-                <div style="width: 789px; height: 519px; left: 25px; top: 18px; position: absolute">
-                  <img style="width: 777px; height: 519px; left: 0px; top: 0px; position: absolute; box-shadow: 50px 50px 50px; border-radius: 30px; filter: blur(30px)" src="https://img.freepik.com/premium-photo/colored-abstract-background-web-design-colorful-spectrum-gradient_956363-2960.jpg?w=996" />
-                  <div style="width: 777px; height: 519px; left: 12px; top: 0px; position: absolute; background: rgba(0, 0, 0, 0.40); box-shadow: 4px 4px 4px; border-radius: 24px; filter: blur(4px); backdrop-filter: blur(20px)"></div>
-                </div>
-                <img style="width: 730px; height: 472px; left: 60px; top: 41px; position: absolute; border-radius: 23px" src="https://img.freepik.com/premium-photo/colored-abstract-background-web-design-colorful-spectrum-gradient_956363-2960.jpg?w=996" />
-                <div style="width: 790px; height: 184px; left: 0px; top: 554px; position: absolute">
-                  <div style="width: 370px; height: 95px; left: 0px; top: 0px; position: absolute; text-align: center; color: white; font-size: 48px; font-family: K2D; font-weight: 400; letter-spacing: 2.40px; word-wrap: break-word">Ninja H2R</div>
-                  <div style="width: 424px; height: 117px; left: 70px; top: 67px; position: absolute; color: #C9C9C9; font-size: 18px; font-family: K2D; font-weight: 400; letter-spacing: 0.90px; word-wrap: break-word">A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</div>
-                  <div style="width: 252px; height: 66px; left: 538px; top: 14px; position: absolute; text-align: center; color: #D6D6D6; font-size: 24px; font-family: K2D; font-weight: 400; letter-spacing: 1.20px; word-wrap: break-word">₹ 79, 00, 000</div>
-                  <div style="width: 189px; height: 51px; left: 570px; top: 105px; position: absolute">
-                    <div style="width: 189px; height: 51px; left: 0px; top: 0px; position: absolute; background: black; border-radius: 5px; border-left: 1px #24FF00 solid"></div>
-                    <div style="width: 174px; height: 21px; left: 7px; top: 15px; position: absolute; text-align: center; color: white; font-size: 16px; font-family: K2D; font-weight: 400; letter-spacing: 0.80px; word-wrap: break-word">Check it Out</div>
-                  </div>
-                </div>
-              </div>
+        <img
+          style="border-radius: 23px;"
+          src="r.png"
+        />
+      </div>
+
+      <div class="c-btm">
+        <div>
+            <h1>Ninja H2R</h1>
+<p>A precision-crafted, 998cc four-cylinder powerhouse, engineered for extreme performance.</p>
         </div>
-</body>
+        <div>
+            <h5>₹ 79, 00, 000</h5>
+<button>Check it Out</button>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
