@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+
+        #main {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            /* background-color: #000; */
+            align-items: center;
+            justify-content: center;
+            gap: 5vw;
+        }
+        .card{
+            width: min-content;
+            position:relative;
+        }
+        .card-img {
+            position: relative;
+aspect-ratio: 16/9;
+width: 300px;
+            background-size: cover;
+            filter: blur(5px);
+            padding: 1vw;
+            border-radius: 2vw;
+        }
+.card-img::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(15px);
+    background-size: cover;
+    /* opacity: 0.5; */
+    z-index: -1;
+
+}
+
+
+img{
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    margin: 1vw;
+    border: 1px solid #fff;
+    filter: blur(0);
+    width: 100%;
+    border-radius: 2vw;
+}
+
+    </style>
+</head>
+<body>
+    <div id="main">
+
+            <!-- <div class="card-img" style="background-image: url(https://img.freepik.com/premium-photo/colored-abstract-background-web-design-colorful-spectrum-gradient_956363-2960.jpg?w=996);">
+            <img src="https://img.freepik.com/premium-photo/colored-abstract-background-web-design-colorful-spectrum-gradient_956363-2960.jpg?w=996" alt="">
+
+            </div> -->
+            
+
+            <div class="card">
+                <div class="card-img" style="background-image: url(https://img.freepik.com/free-photo/cool-motorcycle-presentation-indoors_23-2150849301.jpg?t=st=1714103245~exp=1714106845~hmac=7e88adecd1bfe62eb7d410b37db87ee3e88e1cb0fa978afeb73295e58c8c1daf&w=996);"> </div>
+                    <img src="https://img.freepik.com/free-photo/cool-motorcycle-presentation-indoors_23-2150849301.jpg?t=st=1714103245~exp=1714106845~hmac=7e88adecd1bfe62eb7d410b37db87ee3e88e1cb0fa978afeb73295e58c8c1daf&w=996" alt="">
+            </div>
+        </div>
+</body>
+</html>
