@@ -1,165 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<style>body {
-	margin: 0;
-	width: 100vw;
-	height: 100vh;
-	font-family: 'Poppins', sans-serif;
-	font-weight: 500;
-	font-size: 16px;
-	color: #fff;
-	background: #000;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
-}
-body, body * {
-	box-sizing: border-box;
-}
-#canvas-container {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-}
-canvas {
-	width: 100%;
-	height: 100%;
-}
-main {
-	position: relative;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 100%;
-}
-h1 {
-	font-size: 60px;
-	font-weight: 300;
-	margin: 0;
-}
-p {
-	color: #636363;
-	margin-top: 2rem;
-}</style>
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Muskan Asmit Ashish" />
+    <meta
+      name="description"
+      content="The new look to the Kawasaki Website is given with Collaboration of Muskan, Asmit, Ashish as the parting website in the Competition being held by the Sheryians Coding School."
+    />
+    <!-- Browser Tab -->
+    <title>Kawasaki | Powering your Journey, Every Ride, Every Adventure</title>
+    <link
+      rel="shortcut icon"
+      href="./Src/Assets/Icons/favicons/k-new-favicon-white.svg"
+      type="image/x-icon"
+    />
 
-</head>
-<body>
-    <div id="canvas-container">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="./Src/Stylesheets/main-style.css" />
+  </head>
+  <body>
+    <div class="root">
+      <header>
+        <div class="header-housing">
+          <div class="logo-holder">
+            <div class="logo-holder-housing">
+              <a href="javascript:void(0)">
+                <div class="logo-part-1">
+                  <img
+                    src="./Src/Assets/Icons/header-icons/header-logo/part-1/kawasaki-header-logo-pt-1.svg"
+                    alt="Kawasaki"
+                  />
+                </div>
+                <div class="logo-part-2">
+                  <img
+                    src="./Src/Assets/Icons/header-icons/header-logo/part-2/kawasaki -header-logo-pt-2.svg"
+                    alt=" | Let The Good Times Roll"
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="header-contents-holder">
+            <div class="header-contents-holder-housing">
+              <div class="header-nav">
+                <nav>
+                  <a href="javascript:void(0)">Models</a>
+                  <a href="javascript:void(0)">Store</a>
+                  <a href="javascript:void(0)">Services</a>
+                  <a href="javascript:void(0)">About Us</a>
+                </nav>
+              </div>
+              <div class="search-unit">
+                <div class="search-unit-housing">
+                  <img
+                    class="divider"
+                    src="./Src/Assets/Icons/header-icons/search-icons/divider.svg"
+                    alt=""
+                  />
+                  <input type="text" placeholder="Find your Kawasaki . . ." />
+                  <img
+                    class="search-divider"
+                    src="./Src/Assets/Icons/header-icons/search-icons/search-divider.svg"
+                    alt=""
+                  />
+                  <button class="search-icon">
+                    <img
+                      src="./Src/Assets/Icons/header-icons/search-icons/search-icon.svg"
+                      alt="Enter"
+                    />
+                  </button>
+                  <img
+                    class="divider"
+                    src="./Src/Assets/Icons/header-icons/search-icons/divider.svg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="menu-icon">
+                <div class="menu-icon-housing">
+                  <a href="javascript:void(0)">
+                    <img
+                      src="./Src/Assets/Icons/header-icons/menu-icon/menu-icon.svg"
+                      alt=""
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <div class="hero-section">
+          <div class="hero-section-housing">
+            <div class="hero-video">
+              <video
+                src="./Src/Assets/Videos/ninja-7-hybrid/ninja-7-hybrid-promo-video.mp4"
+                muted
+                autoplay
+                loop
+              ></video>
+              <div class="hero-contents">
+                <div class="hero-content-housing">
+                  <img src="./Src/Assets/Icons/hero-section-icons" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="heading-container">
+          <h1>Apple Product</h1>
+          <canvas class="CanvasDots"></canvas>
+        </div>
+
+<div id="page1">
+
+
+  <div class="swiper-container mySwiper">
+    <div class="swiper-wrapper warper">
+
     </div>
-    <main>
-        <h1>Three.js move light with cursor</h1>
-        <p>Move the cursor around</p>
-    </main>
 
+  </div>
 
+</div>
 
+<div id="page2">
+  <div class="blocks-container">
+    <div id="blocks"></div>
+</div>
 
-    <script src="https://unpkg.com/three@0.85.0/build/three.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</div>
 
-<script>let scene,
-    camera,
-    renderer,
-    cube,
-    ambientLight,
-    pointLight;
+      </main>
 
-let mouse = {
-x: 0,
-y: 0
-};
+      <footer></footer>
+    </div>
+    <!-- Scripts -->`
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-init();
-render();
-
-function init() {
-// Scene
-scene = new THREE.Scene();
-scene.background = new THREE.Color(0x000000);
-
-// Renderer
-renderer = new THREE.WebGLRenderer({antialias:true});
-renderer.setSize( window.innerWidth, window.innerHeight );
-document.getElementById('canvas-container').appendChild(renderer.domElement);
-
-// Camera
-let screenWidth = window.innerWidth,
-        screenHeight = window.innerHeight,
-        viewAngle = 75,
-        nearDistance = 0.1,
-        farDistance = 1000;
-camera = new THREE.PerspectiveCamera(viewAngle, screenWidth / screenHeight, nearDistance, farDistance);
-camera.position.z = 0.75;
-camera.lookAt(scene.position);
-
-// Lights
-// Ambient light
-ambientLight = new THREE.AmbientLight(0x333333, 0.25);
-scene.add(ambientLight);
-
-// Point light
-pointLight = new THREE.PointLight(0xAAAAAA, 0.35);
-pointLight.position.set(0, 0, 0);
-pointLight.castShadow = true;
-pointLight.shadow.bias = 0.0001;
-pointLight.mapSizeWidth = 2048; // Shadow Quality
-pointLight.mapSizeHeight = 2048; // Shadow Quality
-scene.add(pointLight);
-
-// Cube
-let cubeGeometry = new THREE.BoxGeometry( 1, 1, 1 );
-let cubeMaterial = new THREE.MeshPhongMaterial({ // Required For Shadows
-    color: 0x888888,
-    specular: 0x000000,
-    shininess: 10
-});
-cube = new THREE.Mesh(cubeGeometry, cubeMaterial);
-cube.castShadow = true;
-cube.receiveShadow = true;
-cube.position.set(0, 0, -1);
-cube.rotation.x = 10;
-cube.rotation.y = 20;
-scene.add( cube );
-
-// Listeners
-document.addEventListener('mousemove', onMouseMove, false);
-window.addEventListener('resize', onResize);
-}
-
-// Render Loop
-function render() {
-requestAnimationFrame( render );
-cube.rotation.x += 0.005;
-cube.rotation.y += 0.005;
-renderer.render( scene, camera );
-}
-
-// On mouse move
-function onMouseMove(event) {
-event.preventDefault();
-mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-
-let vector = new THREE.Vector3(mouse.x, mouse.y, 0.5);
-vector.unproject(camera);
-let dir = vector.sub(camera.position).normalize();
-let distance = -camera.position.z / dir.z;
-let pos = camera.position.clone().add(dir.multiplyScalar(distance));
-pointLight.position.copy(pos);
-};
-
-// On resize
-function onResize() {
-let width = window.innerWidth;
-let height = window.innerHeight;
-renderer.setSize(width, height);
-camera.aspect = width/height;
-camera.updateProjectionMatrix();
-}</script>
-</body>
+    <script src="./Src/Scripts/main-script.js"></script>
+  </body>
 </html>
+
+
+
